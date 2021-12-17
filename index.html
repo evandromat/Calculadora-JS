@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <title>Calculadora em JavaScritp</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <div class="col-6 corpo mt-3">
+                <div class="row display justify-content-end">
+                    <h1 id="mostrador"></h1>
+                    <input type="text" maxlength="9" id="input">
+                </div>
+
+                <div class="row operacoes_linha d-flex">
+                    <div class="col-3 d-flex operacoes_col">
+                        <div class="soma"><button class="btn btn-secondary btn-soma dig" data-id="+"
+                                onclick="teclaPrecionada(0)">+</button></div>
+                        <div class="menos"><button class="btn btn-secondary btn-menos dig" data-id="-"
+                                onclick="teclaPrecionada(1)">-</button></div>
+                        <div class="vezes"><button class="btn btn-secondary btn-vezes dig" data-id="*"
+                                onclick="teclaPrecionada(2)">*</button></div>
+                        <div class="dividir"><button class="btn btn-secondary btn-dividir dig" data-id="/"
+                                onclick="teclaPrecionada(3)">/</button></div>
+                    </div>
+
+                </div>
+                <div class="d-flex btn-digitos">
+                    <div class="col-9 digitos">
+                        <div class="d-flex row linha-4">
+
+                            <div id="sete"><button class="btn btn-secondary btn-sete dig" data-id="7"
+                                    onclick="teclaPrecionada(4)">7</button></div>
+                            <div id="oito"><button class="btn btn-secondary  btn-oito dig" data-id="8"
+                                    onclick="teclaPrecionada(5)">8</button></div>
+                            <div id="nove"><button class="btn btn-secondary  btn-nove dig" data-id="9"
+                                    onclick="teclaPrecionada(6)">9</button></div>
+
+                        </div>
+
+                        <div class="d-flex row linha-4">
+                            <div id="quatro"> <button class="btn btn-secondary quatro dig" data-id="4"
+                                    onclick="teclaPrecionada(7)">4</button></div>
+                            <div id="cinco"><button class="btn btn-secondary cinco dig" data-id="5"
+                                    onclick="teclaPrecionada(8)">5</button></div>
+                            <div id="seis"><button class="btn btn-secondary seis dig" data-id="6"
+                                    onclick="teclaPrecionada(9)">6</button></div>
+                        </div>
+
+                        <div class="d-flex row linha-4">
+                            <div id="um"> <button class="btn btn-secondary um dig" data-id="1"
+                                    onclick="teclaPrecionada(10)">1</button></div>
+                            <div id="dois"><button class="btn btn-secondary dois dig" data-id="2"
+                                    onclick="teclaPrecionada(11)">2</button></div>
+                            <div id="tres"><button class="btn btn-secondary tres dig" data-id="3"
+                                    onclick="teclaPrecionada(12)">3</button></div>
+                        </div>
+
+                        <div class="d-flex row linha-4">
+                            <div id="zero"> <button class="btn btn-secondary zero dig" data-id="0"
+                                    onclick="teclaPrecionada(13)">0</button></div>
+                            <div id="ponto"><button class="btn btn-secondary ponto  dig" data-id="."
+                                    onclick="teclaPrecionada(14)">.</button></div>
+                            <div id="apaga"><button class="btn btn-secondary apaga" data-id="C"
+                                    onclick="teclaPrecionada(15)" ondblclick="apagaTudo()">C</button></div>
+                        </div>
+                    </div>
+                    <div class="col-3 igual">
+                        <div class="div_igual"><button class="btn btn-secondary .dig" data-id=""
+                                onclick="teclaPrecionada(16)">=</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="calc.js"></script>
+
+</body>
+
+</html>
